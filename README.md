@@ -2,8 +2,6 @@
 
 Um jogo de endless runner inspirado no clássico Super Mario Bros, desenvolvido com HTML, CSS e JavaScript puro — sem frameworks, sem dependências.
 
-![Preview do Jogo](assets/imgs/printGame.png)
-
 ---
 
 ## 🎮 Como Jogar
@@ -88,12 +86,6 @@ xdg-open index.html  # Linux
 - **localStorage** — persistência do recorde
 
 ---
-
-## 📸 Screenshots
-
-| Tela Inicial | Gameplay | Game Over |
-|---|---|---|
-| ![Start](assets/imgs/print-jogo-do-mario.jpeg) | ![Game](assets/imgs/printGame.png) | ![GameOver](assets/imgs/game-over.png) |
 
 ---
 
