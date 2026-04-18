@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Super Mario Jump!</title>
+    <link rel="shortcut icon" href="assets/imgs/Mario-ico.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="hud">
+        <div class="hud-item">
+            <span class="hud-label">SCORE</span>
+            <span class="hud-value" id="score">000000</span>
+        </div>
+        <div class="hud-item hud-center">
+            <img src="assets/imgs/coin.gif" class="hud-coin-icon" alt="coin">
+            <span class="hud-value" id="coin-count">x00</span>
+        </div>
+        <div class="hud-item">
+            <span class="hud-label">BEST</span>
+            <span class="hud-value" id="best-score">000000</span>
+        </div>
+    </div>
+
+    <div class="game-board" id="game-board">
+        <img src="assets/imgs/clouds.png" class="cloud cloud-1">
+        <img src="assets/imgs/clouds.png" class="cloud cloud-2">
+        <img src="assets/imgs/mario.gif" class="mario idle" id="mario">
+        <img src="assets/imgs/pipe.png" class="pipe" id="pipe">
+
+        <div id="coins-container"></div>
+
+        <div id="popups-container"></div>
+    </div>
+
+    <div class="ground-strip"></div>
+
+    <div class="game-over" id="game-over">
+        <div class="game-over-box">
+            <div class="game-over-title">GAME OVER</div>
+            <img src="assets/imgs/game-over.png" class="game-over-img" alt="game over">
+            <div class="game-over-stats">
+                <div class="stat-row">
+                    <span>SCORE</span>
+                    <span id="final-score">000000</span>
+                </div>
+                <div class="stat-row">
+                    <span>COINS</span>
+                    <img src="assets/imgs/coin.gif" class="stat-coin" alt="coin">
+                    <span id="final-coins">00</span>
+                </div>
+                <div class="stat-row best-row">
+                    <span>BEST</span>
+                    <span id="final-best">000000</span>
+                </div>
+            </div>
+            <button class="restart-btn" id="restart-btn">
+                <span>▶ JOGAR NOVAMENTE</span>
+            </button>
+            <p class="hint-text">ESPAÇO / TOQUE para pular</p>
+        </div>
+    </div>
+
+    <div class="start-screen" id="start-screen">
+        <div class="start-box">
+            <div class="start-title">SUPER<br><span class="title-accent">MARIO</span><br>JUMP!</div>
+            <img src="assets/imgs/mario.gif" class="start-mario" alt="mario">
+            <button class="start-btn" id="start-btn">▶ INICIAR</button>
+            <p class="hint-text">ESPAÇO / TOQUE para pular</p>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="assets/audio/background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="coinSound">
+        <source src="assets/audio/coin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="jumpSound">
+        <source src="assets/audio/jump.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="gameoverSound">
+        <source src="assets/audio/gameover.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+
+</html>
